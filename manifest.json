@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "YouTuBlocker",
+    "version": "1.0",
+    "description": "Blocks ads on YouTube.",
+    "permissions": [
+      "tabs", "storage", "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_start"
+      }
+    ],
+    "icons": {
+      "48": "./icon48.png",
+      "128":"./icon128.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icon48.png"
+      }
+    }
+  }
+  
